@@ -12,8 +12,6 @@ Porque o React pode ser utilizado tambem para mobile usando outras bibliotecas c
 
 Pois com essa poderosa ferramenta, é possivel a criação de qualquer tipo de interface seja ela mobile, web, tv, realidade virtual entre outras.
 
-<br>
-
 ## Babel
 
 <strong>Babel</strong> Babel basicamente converte o nosso código de uma maneira que todos os browsers e todo o ambiente de nossa aplicação consiga entender os nossos códigos.
