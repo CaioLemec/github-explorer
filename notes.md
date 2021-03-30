@@ -344,7 +344,6 @@ function adicionarValorAoContador () {
 
 > <h2 style="color: green"><b>useEffect( ()   =>   {}  ,  []  );</b><h2>
 
-<br>
 
 <p style="color: orange">WARNING 1:</p>
 
