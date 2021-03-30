@@ -337,8 +337,10 @@ OBS: Eu poderia ainda, botar uma verificação para caso esse retorno seja vazio
 
 <br>
 
-## Conceito Sobre Estado.
+## Conceito Sobre Estado 
 <br>
+
+></h1>useState (hook)</h2>
 
 <b>O que é?</b>
 
@@ -369,6 +371,11 @@ export function Contador () {
 Por padrão useState vai em retornar um array com 2 functions.
 Para alterar o valor de uma variável eu vou precisar usar esses dois retornos desfragmentando o array:
 
+<br>
+
+> OBS: Sempre iniciar o estado com uma variavel do mesmo tipo do que aquela que você deseja armazenar. 
+> Ex: Array: useState([]);
+
 ```const [contador, setContador] =useState(0);```
     
 Por convenção o nome do segundo elemento sempre será set+NomeDoPrimeiroElemento.
@@ -385,6 +392,52 @@ function adicionarValorAoContador () {
 
 > <b>Imutabilidade</b>: <br>
 >Uma variável, sempre receberá um novo valor. Quando dizemos que uma variável é imutavel, quer dizer que não podemos alterar diretamente o valor da mesma, mas sim nós precisaremos dar um novo valor para ela. Como podemos ver o que ocorre no setContador quando usamos o useState.
+>OBS: No react sempre que for consumir uma API, usaremos um hook para mudar esse valor da variável após a api retornar os valores requisitados.
+
+></h1>useEffect (hook)</h2>
+
+<b>O que é?</b> 
+
+```useEffect``` serve basicamente para disparar uma function quando alguma coisa acontecer em sua aplicação.
+
+> Exemplo: Uma variável mudou, dispare tal function.
+
+```useEffect``` recebe dois parâmetros: (Qual parâmetro quer executar?, Quando você quer executar?) 
+
+<br>
+
+> <h2 style="color: green"><b>useEffect( ()   =>   {}  ,  []  );</b><h2>
+
+<br>
+
+<p style="color: orange">WARNING 1:</p>
+
+>Nunca utilize o useEffect sem um segundo parâmetro, pois caso contrário, o mesmo entrará em looping.
+
+
+<p style="color: orange">WARNING 2:</p> 
+
+>Quando o segundo parâmetro é um array vazio, a função do primeiro parâmetro só será executada uma única vez.
+
+- Exemplo de uso:
+
+```bash
+    export function ImprimirNaTelaRepos {
+        useEffect(()=> {
+        fetch('https://api.github.com/users/CaioLemec/repos')
+        .then(response => response.json())
+        .then(dados => console.log(dados)) 
+        }, [])
+    }    
+```
+> <b>O que está acontecendo no exemplo?</b> 
+Quando a function é executada, ele vai buscar através do fetch os repositórios do usuário, quando obtiver essa reposta vai converter para json, quando a resposta para json for convertida, vai imprimir através do console.log o valor de dados uma única vez, pois 
+o segundo parâmetro é um array vazio.
+
+
+
+
+
 
 
  
