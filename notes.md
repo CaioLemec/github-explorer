@@ -82,7 +82,7 @@ Formas para agilizar o processo quando em desenvolvimento ou em produção:
 
 <br>
 
-```
+```bash
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -102,7 +102,7 @@ Para importar css, precisamos primeiro apontar para o webpack as regras. Para is
 
 Obs: Não esqueça de configurar as rules dentro do webpack.config.js...
 
-```
+```bash
 {
     test: /\.scss$/,
     exclude: /node_modules/,
