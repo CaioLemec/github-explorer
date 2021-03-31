@@ -369,6 +369,68 @@ function adicionarValorAoContador () {
 Quando a function é executada, ele vai buscar através do fetch os repositórios do usuário, quando obtiver essa reposta vai converter para json, quando a resposta para json for convertida, vai imprimir através do console.log o valor de dados uma única vez, pois 
 o segundo parâmetro é um array vazio.
 
+<br>
+
+## Fundamentos TypeScript
+
+<br>
+
+<b>O que é?</b>
+
+<strong style="color: cornflowerblue">TypeScript</strong>  é um superSet, ou seja, um conjunto de funcionalidades que são adicionadas ao <strong style="color: yellow">JavaScript</strong>.
+
+> O código TypeScript é compilado e convertido para ES5 antes de ir para produção. Por isso, pode ser utilizado normalmente em qualquer projeto JavaScript.
+
+<br>
+
+<b>Por que usar?</b>
+
+- <strong style="color: yellow">JavaScript</strong> puro tem sua tipagem dinâmica o que torna o ambiente menos escalável e mais sucetivel a erros, portanto, usando o <strong style="color: cornflowerblue">TypeScript</strong> é possível adicionar novos tipos estáticos e pre-definidos em sua aplicação.
+
+- O <strong style="color: cornflowerblue">TypeScript</strong> fica checando essas variavéis e seus tipos enquanto estamos desenvolvendo e apresenta erros quando encontra incoerências na linha de código.
+
+- Previne erros no formato dos tipos dentro da aplicação e adiciona inteligencia extra no auto-complete dentro do editor.
+
+<br>
+
+Tipagem dinâmica com <strong style="color: yellow">JavaScript</strong>:
+
+```bash
+let x = 10 // x, type:number.
+
+x = "10" // x, type:string.
+
+```
+<br>
+
+Tipagem estática com <strong style="color: cornflowerblue">TypeScript</strong>:
+
+```bash
+let x: number = 10 // x, type:number.
+
+x = "10" // ERRO - x,type != number.
+
+```
+<br>
+
+<b>Configurando o <strong style="color: cornflowerblue">TypeScript</strong>!</b>
+
+Instalação: ``` yarn add TypeScript -D ``` instala typescript.
+
+Inicialização: ``` yarn tsc --init ``` cria tsconfig.json.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
