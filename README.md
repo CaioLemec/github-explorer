@@ -21,7 +21,7 @@ Através deste projeto, foi possível aprender fundamentos sobre componentes, pr
 
 Aprendi também as vantagens de uma tipagem estática importandos as funcionalidades do Typescript para o Javascript.
 
-> Você pode checar algumas anotações do módulo no arquivo Notes.md
+> Você pode checar algumas anotações do módulo no arquivo [notes](./notes.md).
 
 ## 📝 Ambiente
 
