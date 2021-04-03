@@ -31,31 +31,19 @@ Aprendi também as vantagens de uma tipagem estática importandos as funcionalid
 git@github.com:CaioLemec/01-github-explorer.git
 ```
 
-2. Instale o node.js:
-
-```bash
- https://yarnpkg.com/
-```
-
-3. Abra o pasta do projeto no VSCode:
-
-```bash
- cd ../01-github-explorer.git
-```
-
-4. Instale as dependências usando o comando:
+2. Instale as dependências usando o comando:
 
 ```bash
  yarn
 ```
 
-6. No seu terminal use o comando:
+3. No seu terminal use o comando para iniciar a aplicação:
 
 ```bash
 yarn dev
 ```
 
-7. acesse o endereço em um browser compatível:
+4. acesse o endereço em um browser compatível:
 
 ```bash
 http://localhost:8080/
