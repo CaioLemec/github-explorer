@@ -1,4 +1,67 @@
-## React e suas dependencias.
+## Iniciando no React: (START TEORICO)
+
+## O que é Node? 
+Node é uma plataforma que possibilita rodar o Javascript sem a utilização do browser.
+Ele é composto por muitos recursos que irão auxiliar no <b>backend</b> e no <b>frontend</b>.
+
+> Exemplo: (Motor V8, encontrado em browsers) API'S (File System, HTTP, Websocket).
+
+<br>
+
+## Como instalar o Node?
+É recomendado instalar o node via terminal, pois fazendo isso possuímos um maior controle além de 
+ser mais fácil realizar alterações posteriormente. Basta instalar para seu sistema operacional.
+```https://nodejs.org/en/download/package-manager/#linux```
+
+<br>
+
+## O que é NPM?
+NPM (Node packed manager) é gerenciador de pacotes. Ele que gerencia as dependências de 
+um determinado projeto. 
+> Obs: No linux usamos um gerenciador de pacote especifico da distro ao usar o famoso: <strong>apt-get</strong>.
+> No Windowns temos o <strong>chocolatey</strong> e no MacOs temos o <strong>Homebew</strong>.
+
+<br>
+
+## O que é Yarn?
+Yarn é um gerenciador de pacotes concorrente do NPM. Yarn foi desenvolvido pelo facebook com 
+a promessa de ser um gerenciador de pacote mais rápido. As diferenças eram notáveis no início, 
+porem hoje o NPM e YARN são semelhantes.
+
+<br>
+
+## O que é React?
+Antes de entender o que é o react, devemos entender a diferença entre biblioteca e frameworks.
+
+<strong>Framework</strong>: Caixa de ferramenta, cheia de recursos. O foco dos frameworks é mais amplo, eles 
+podem ser coleções de api's e até mesmo bibliotecas. Ex: (Angular, Ionic, Next).
+
+<strong>Biblioteca</strong>: Diferentemente dos frameworks, bibliotecas resolvem problemas pequenos, direcionados.
+Elas são uma coleção de códigos voltados a resolver um determinado tipo de problema.
+Ex: (React, moment, jQuery).
+
+<br>
+
+## Beleza mas, o que é React?
+É uma biblioteca de “componentização” voltada para desenvolvimento web, ele é responsável 
+por fazer a camada de view em um projeto. Esta biblioteca separa tudo em pequenos componentes 
+para depois juntar e formar uma interface. O conceito de “componentização” pode ser traduzido 
+como reutilização, ou seja, um componente pode ser reutilizado diversas vezes em uma aplicação.
+OBS: O React Native, é o mesmo sistema de componentização, porém voltado para desenvolvimento mobile.
+
+<br>
+
+## Criando um projeto pré-configurado com React.
+
+No terminal, dentro da pasta do seu projeto basta usar a linha de comando: 
+
+```npx create-react-app nome-do-projeto```
+
+Para criar uma estrutura pre-configurada de um projeto react com typescript: ```yarn create react-app nome-do-projeto --template typescript```
+
+<br>
+
+## React e suas dependências.
 
 - <strong>React-dom</strong> É a forma que nós temos para trabalhar com a biblioteca React na web. É uma dependência que permite o React se comunicar com a arvore de elementos do HTML. 
 
@@ -11,6 +74,8 @@ Porque o React pode ser utilizado também para mobile usando outras bibliotecas 
 - <strong>React é muito genérico, por quê?</strong> 
 
 Pois com essa poderosa ferramenta, é possível a criação de qualquer tipo de interface seja ela mobile, web, tv, realidade virtual entre outras.
+
+<br>
 
 ## Babel
 
@@ -80,7 +145,7 @@ Formas para agilizar o processo quando em desenvolvimento ou em produção:
 
 <br>
 
-```bash
+```
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -100,7 +165,7 @@ Para importar css, precisamos primeiro apontar para o webpack as regras. Para is
 
 Obs: Não esqueça de configurar as rules dentro do webpack.config.js...
 
-```bash
+```
 {
     test: /\.scss$/,
     exclude: /node_modules/,
@@ -343,6 +408,7 @@ function adicionarValorAoContador () {
 
 > <h2 style="color: green"><b>useEffect( ()   =>   {}  ,  []  );</b><h2>
 
+<br>
 
 <p style="color: orange">WARNING 1:</p>
 
@@ -414,32 +480,6 @@ x = "10" // ERRO - x,type != number.
 
 <b>Configurando o <strong style="color: cornflowerblue">TypeScript</strong>!</b>
 
-> Instalação: ``` yarn add TypeScript -D ``` instala typescript.
+Instalação: ``` yarn add TypeScript -D ``` instala typescript.
 
-> Inicialização: ``` yarn tsc --init ``` cria tsconfig.json.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
+Inicialização: ``` yarn tsc --init ``` cria tsconfig.json.
