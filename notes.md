@@ -1,32 +1,32 @@
 ## Iniciando no React: (START TEORICO)
 
 ## O que é Node? 
-Node é uma plataforma que possibilita rodar o JavaScript sem a utilização do browser.
-Ele é composto por muitos recursos que irão auxiliar na programação no Backend e no Frontend.
-Exemplo: (Motor V8, encontrado em browsers) API'S (File System, HTTP, Websocket).
+Node é uma plataforma que possibilita rodar o Javascript sem a utilização do browser.
+Ele é composto por muitos recursos que irão auxiliar no <b>backend</b> e no <b>frontend</b>.
+
+> Exemplo: (Motor V8, encontrado em browsers) API'S (File System, HTTP, Websocket).
 
 <br>
 
 ## Como instalar o Node?
 É recomendado instalar o node via terminal, pois fazendo isso possuímos um maior controle além de 
 ser mais fácil realizar alterações posteriormente. Basta instalar para seu sistema operacional.
-```https://nodejs.org/en/download/package-manager/#windows```
+```https://nodejs.org/en/download/package-manager/#linux```
 
 <br>
 
 ## O que é NPM?
 NPM (Node packed manager) é gerenciador de pacotes. Ele que gerencia as dependências de 
 um determinado projeto. 
-Obs: No linux nós já usavamos um gerenciador de pacote especifico da distro Ubuntu quando 
-usávamos o comando <strong>apt-get</strong>.
-No Windowns temos o <strong>chocolatey</strong>, No MacOs temos o <strong>Homebew</strong>.
+> Obs: No linux usamos um gerenciador de pacote especifico da distro ao usar o famoso: <strong>apt-get</strong>.
+> No Windowns temos o <strong>chocolatey</strong> e no MacOs temos o <strong>Homebew</strong>.
 
 <br>
 
 ## O que é Yarn?
 Yarn é um gerenciador de pacotes concorrente do NPM. Yarn foi desenvolvido pelo facebook com 
-a promessa de ser um gerenciador de pacote mais rápido. As diferenças eram notáveis no ínicio, 
-porem hoje o NPM e YARN são similares.
+a promessa de ser um gerenciador de pacote mais rápido. As diferenças eram notáveis no início, 
+porem hoje o NPM e YARN são semelhantes.
 
 <br>
 
@@ -47,54 +47,55 @@ Ex: (React, moment, jQuery).
 por fazer a camada de view em um projeto. Esta biblioteca separa tudo em pequenos componentes 
 para depois juntar e formar uma interface. O conceito de “componentização” pode ser traduzido 
 como reutilização, ou seja, um componente pode ser reutilizado diversas vezes em uma aplicação.
-OBS: O React Native, é o mesmo sistema de componentização, porem voltado para desenvolvimento mobile.
+OBS: O React Native, é o mesmo sistema de componentização, porém voltado para desenvolvimento mobile.
 
 <br>
 
-## Criando um projeto com React.
+## Criando um projeto pré-configurado com React.
 
 No terminal, dentro da pasta do seu projeto basta usar a linha de comando: 
-```npx create-react-app nome-do-projeto.```
-Depois de abrir o projeto com ```npm start```, não poderemos fechar o terminal, a solução é criar outra aba de
-terminal com o comando ```control+shift+t``` para abrir e editar o projeto.
+
+```npx create-react-app nome-do-projeto```
+
+Para criar uma estrutura pre-configurada de um projeto react com typescript: ```yarn create react-app nome-do-projeto --template typescript```
 
 <br>
 
-## React e suas dependencias.
+## React e suas dependências.
 
-<strong>React-dom</strong> É a forma que nós temos para trabalhar com react na web. É uma dependencia que permite o react se comunicar com a arvore de elementos do html. 
+- <strong>React-dom</strong> É a forma que nós temos para trabalhar com a biblioteca React na web. É uma dependência que permite o React se comunicar com a arvore de elementos do HTML. 
 
 Para instalar basta usar o comando: ```yarn add react-dom```
 
-<strong> Por que o React e o React-dom são instalados separadamente?</strong>
+- <strong> Por que o React e o React-dom são instalados separadamente?</strong>
 
-Porque o React pode ser utilizado tambem para mobile usando outras bibliotecas como o react-native.
+Porque o React pode ser utilizado também para mobile usando outras bibliotecas como o <b>React-native</b>.
 
-<strong>React é muito genérico, por quê?</strong> 
+- <strong>React é muito genérico, por quê?</strong> 
 
-Pois com essa poderosa ferramenta, é possivel a criação de qualquer tipo de interface seja ela mobile, web, tv, realidade virtual entre outras.
+Pois com essa poderosa ferramenta, é possível a criação de qualquer tipo de interface seja ela mobile, web, tv, realidade virtual entre outras.
 
 <br>
 
 ## Babel
 
-<strong>Babel</strong> Babel basicamente converte o nosso código de uma maneira que todos os browsers e todo o ambiente de nossa aplicação consiga entender os nossos códigos.
+- <strong>Babel</strong> basicamente converte o nosso código de uma maneira que todos os browsers e todo o ambiente de nossa aplicação consiga entender os nossos códigos.
 
 Para instalar é simples ```yarn add @babel/biblioteca -D``` 
-> Por que -D? Indicaremos que é uma dependencia de desenvolvimento, portanto não serão necessárias quando em produção.
+> Por que -D? Indicaremos que é uma dependência de desenvolvimento, portanto não serão necessárias quando em produção.
 
 <li>@babel/core - bibioteca do babel.</li>
-<li>@babel/cli - conseguir habilidar babel atraves da linha de comando.</li>
+<li>@babel/cli - conseguir habilitar babel atraves da linha de comando.</li>
 <li>@babel/preset-env - extensão do babel que identifica o ambiente que sua aplicação está sendo executada para converter o código da melhor maneira possível.</li>
 <li>babel-loader - Integração entre babel e webpack.</li>
 
 <br>
 
->Para configurar o babel é necessario criar um arquivo, ```babel.config.js```.
+>Para configurar o babel é necessário criar um arquivo, ```babel.config.js```.
 
 <br>
 
-<strong> E como converter um código usando babel?</strong> 
+- <strong> E como converter um código usando babel?</strong> 
 
 através da cli (interface linha comando) podemos executar.
 ```yarn babel ENDEREÇO-ARQUIVO-A-CONVERTER --out-file NOME-ARQUIVO-GERADO ```
@@ -104,22 +105,22 @@ Exemplo:
 
 <br>
 
-<strong>Mas nós temos um problema!!</strong> 
+- <strong>Houston... We have a problem!</strong> 
 
-Quando tentar usar o babel para converter um código react, e nesse código tiver elementos HTML, vai dar erro.
+Quando tentar usar o babel para converter um código React, e nesse código tiver elementos HTML, vai dar erro.
 Para eliminar esse erro nós precisamos instalar o ```@babel/preset-react``` utilizando o código ```yarn add @babel/preset-react``` para que se
 torne possível a interpretação do babel nesses arquivos react. OBS: Não esqueça de importar a nova extensão no arquivo ```babel.config.js```.
 
 <br>
-> Arquivos .JSX são arquivos que carregam a nomeclatura correta quando utilizamos html em arquivos javascript.
+> Arquivos .JSX são arquivos que carregam a nomenclatura correta quando utilizamos HTML em arquivos javascript.
 <br>
 
 ## WebPack
 
-<strong>Webpack</strong> é responsavel por converter arquivos e torna-los entendiveis para o browser. Por exemplo:
+<strong>Webpack</strong> é responsável por converter arquivos e torna-los entendíveis para o browser. Por exemplo:
 <br>
 - Arquivos .sass e serão convertidos para css.
-- Arquivos png e jpg importados pelo JavaScript convertidos em arquivos elegiveis para o browser e etc.
+- Arquivos png e jpg importados pelo JavaScript convertidos em arquivos elegíveis para o browser e etc.
 
 <br>
 
@@ -132,7 +133,7 @@ Para instalar é simples: ```yarn add webpack -D```
 
 <br>
 
-> Para configurar o babel é necessario criar um arquivo, ```webpack.config.js```.
+> Para configurar o babel é necessário criar um arquivo, ```webpack.config.js```.
 
 <br>
 
@@ -140,7 +141,7 @@ Formas para agilizar o processo quando em desenvolvimento ou em produção:
 
 ><li>Ambiente de desenvolvimento (dev) !== Ambiente de produção (build)</li>
 ><li><b>source maps</b> - Funcionalidade que ajuda a identificar erros no console. </li>
-><li><b>cross-env</b> - Defini variaveis ambiente independente de SO. </li>
+><li><b>cross-env</b> - Defini variáveis ambiente independente de SO. </li>
 
 <br>
 
@@ -177,7 +178,7 @@ Obs: Não esqueça de configurar as rules dentro do webpack.config.js...
 
 <b>O que é?</b>
 
-<li>São formas de encapsular uma determinada quantidade de código dentro de um único elemento. Elemento este que possui sua propria funcionalidade, estrutura, estilização.</li>
+<li>São formas de encapsular uma determinada quantidade de código dentro de um único elemento. Elemento este que possui sua própria funcionalidade, estrutura, estilização.</li>
 <li>Components é uma forma de organizar uma aplicação, dividir ela em diversos pedaços.</li>
 
 <b>Exemplo:</b>
@@ -201,7 +202,7 @@ export function Componente() {
 
 ```
 
-Por convenção, um component é um function que sempre leva a primeira letra maiuscula e nunca mais de um component por arquivo.
+Por convenção, um component é um function que sempre leva a primeira letra maiúscula e nunca mais de um component por arquivo.
 
 <br>
 
@@ -209,7 +210,7 @@ Por convenção, um component é um function que sempre leva a primeira letra ma
 
 <b>O que é?</b>
 
-As propriedades no react são semelhantes aos atributos nas tags HTML, ou seja, são informações variáveis para que um componente possa funcionar de forma diferente.
+As propriedades no React são semelhantes aos atributos nas tags HTML, ou seja, são informações variáveis para que um componente possa funcionar de forma diferente.
 
 <b>Usar por quê?</b>
 
@@ -272,7 +273,7 @@ export function ComponenteUm () {
 
 ```
 
-Agora no ComponenteDois é possivel acessar tais informações através do argumentos (props) da função.
+Agora no ComponenteDois é possível acessar tais informações através do argumentos (props) da função.
 
 <br>
 <b> ComponenteDois: </b>
@@ -342,20 +343,19 @@ OBS: Eu poderia ainda, botar uma verificação para caso esse retorno seja vazio
 
 ></h1>useState (hook)</h2>
 
-<b>O que é?</b>
+- <b>O que é?</b>
 
-O estado no react é uma forma de alterar um valor de uma variavel e ela refletir em sua interface. 
+O estado no React é uma forma de alterar um valor de uma variável e ela refletir em sua interface. 
 
-<b>Usar por quê?</b>
+- <b>Usar por quê?</b>
 
-Ao tentar mudar uma variavel da maneira tradicional, ou seja, mudar o valor de uma variavel sem usar um hook, não vamos conseguir 
-justamente pelo fato de não ser nada performatico o react ficar "olhando" para todas as variaveis e verificando se seus valores mudaram.
+Ao tentar mudar uma variável sem usar um hook, não vamos conseguir justamente pelo fato de não ser nada performático o react ficar "olhando" e verificando se os valores mudaram.
 
-<b>Como utilizar?</b> 
+- <b>Como utilizar?</b> 
 
 Para que possamos mudar um valor de uma variável é necessário usar um hook chamado `useState`.
 
-Vamos supor ser necessário a realização de um contador. Para isso nós teriamos que criar uma function para ser acionada quando o usuário clicasse em um determinado button, então:
+Vamos supor ser necessário a realização de um contador. Para isso nós teríamos que criar uma function para ser acionada quando o usuário clicasse em um determinado button, então:
 
 Primeiro devemos importar esse hook usando:
 
@@ -373,7 +373,7 @@ Para alterar o valor de uma variável eu vou precisar usar esses dois retornos d
 
 <br>
 
-> OBS: Sempre iniciar o estado com uma variavel do mesmo tipo do que aquela que você deseja armazenar. 
+> OBS: Sempre iniciar o estado com uma variável do mesmo tipo do que aquela que você deseja armazenar. 
 > Ex: Array: useState([]);
 
 ```const [contador, setContador] =useState(0);```
@@ -391,7 +391,7 @@ function adicionarValorAoContador () {
 ```
 
 > <b>Imutabilidade</b>: <br>
->Uma variável, sempre receberá um novo valor. Quando dizemos que uma variável é imutavel, quer dizer que não podemos alterar diretamente o valor da mesma, mas sim nós precisaremos dar um novo valor para ela. Como podemos ver o que ocorre no setContador quando usamos o useState.
+>Uma variável, sempre receberá um novo valor. Quando dizemos que uma variável é imutável, quer dizer que não podemos alterar diretamente o valor da mesma, mas sim nós precisaremos dar um novo valor para ela. Como podemos ver o que ocorre no setContador quando usamos o useState.
 >OBS: No react sempre que for consumir uma API, usaremos um hook para mudar esse valor da variável após a api retornar os valores requisitados.
 
 ></h1>useEffect (hook)</h2>
@@ -454,7 +454,7 @@ o segundo parâmetro é um array vazio.
 
 - O <strong style="color: cornflowerblue">TypeScript</strong> fica checando essas variavéis e seus tipos enquanto estamos desenvolvendo e apresenta erros quando encontra incoerências na linha de código.
 
-- Previne erros no formato dos tipos dentro da aplicação e adiciona inteligencia extra no auto-complete dentro do editor.
+- Previne erros no formato dos tipos dentro da aplicação e adiciona inteligência extra no auto-complete dentro do editor.
 
 <br>
 
