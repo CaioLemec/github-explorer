@@ -15,13 +15,13 @@
 
 Primeiro projeto realizado no curso Ignite da [Rocketseat](https://rocketseat.com.br/) que tem como principal objetivo, introduzir conceitos básicos da biblioteca React. 
 
-Foi possível configurar um projeto usando React do zero, realizando configurações de importantes dependencias como Babel e Webpack.
+Foi possível configurar um projeto usando React do zero, realizando configurações de importantes dependências como Babel e Webpack.
 
 Através deste projeto, foi possível aprender fundamentos sobre componentes, propriedades e ganchos (hooks).
 
-Aprendi támbem as vantagens de uma tipagem estática importandos as funcionalidades do Typescript para o Javascript.
+Aprendi também as vantagens de uma tipagem estática importandos as funcionalidades do Typescript para o Javascript.
 
-Notas da aula em: [Notes](./Notes.md).
+> Você pode checar algumas anotações do módulo no arquivo Notes.md
 
 ## 📝 Ambiente
 
