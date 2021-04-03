@@ -415,9 +415,9 @@ x = "10" // ERRO - x,type != number.
 
 <b>Configurando o <strong style="color: cornflowerblue">TypeScript</strong>!</b>
 
-Instalação: ``` yarn add TypeScript -D ``` instala typescript.
+> Instalação: ``` yarn add TypeScript -D ``` instala typescript.
 
-Inicialização: ``` yarn tsc --init ``` cria tsconfig.json.
+> Inicialização: ``` yarn tsc --init ``` cria tsconfig.json.
 
 
 
